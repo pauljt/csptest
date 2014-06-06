@@ -1,0 +1,14 @@
+{
+  "name": "CSP Test",
+  "description": "CSP Test",
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "pauljt",
+    "url": "https://github.com/pauljt"
+    },
+  "icons": {
+      "128": "/style/icons/Blank.png"
+  },
+  "type":"certified",
+  "csp": "style-src 'self';"
+}

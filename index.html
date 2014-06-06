@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+  <meta charset="utf-8">
+  <title>CSP Test</title>
+
+
+  <script src='test.js'></script>
+</head>
+
+<body>
+Certified App CSP policy forbids inline styles. This is a series of tests which attempt to change the background color
+using a style.
+
+
+<h2> Forbidden</h2>
+
+<p>
+  &lt;style&gt;
+  <button id='test1'> Test</button>
+</p>
+
+<p>
+  &lt;element style='...'&gt;
+  <button id='test2'> Test</button>
+</p>
+
+<p>
+  element.setAttribute('style',...);
+  <button id='test3'> Test</button>
+</p>
+
+<h2>Allowed</h2>
+
+<p>
+  element.style=
+  <button id='test4'> Test</button>
+</p>
+
+<p>
+  element.style.background=
+  <button id='test5'> Test</button>
+</p>
+
+<p>
+  element.removeAttribute('style');
+  <button id='test6'> Test</button>
+</p>
+
+<p>
+  testDiv.style.setProperty('background','orange');
+  <button id='test7'> Test</button>
+</p>
+
+<h4>Test Output</h4>
+
+<div id='test'></div>
+
+</body>
+
+</html>
