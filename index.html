@@ -14,49 +14,61 @@
 Certified App CSP policy forbids inline styles. This is a series of tests which attempt to change the background color
 using a style.
 
+<h4>Test Output</h4>
+<div id='test'></div>
 
 <h2> Forbidden</h2>
-
 <p>
   &lt;style&gt;
   <button id='test1'> Test</button>
 </p>
-
 <p>
   &lt;element style='...'&gt;
   <button id='test2'> Test</button>
 </p>
-
 <p>
   element.setAttribute('style',...);
   <button id='test3'> Test</button>
 </p>
 
-<h2>Allowed</h2>
-
 <p>
-  element.style=
+  append result of document.createElement('style')
   <button id='test4'> Test</button>
 </p>
 
+
+<h2>Allowed</h2>
 <p>
-  element.style.background=
+  element.style=
   <button id='test5'> Test</button>
 </p>
-
 <p>
-  element.removeAttribute('style');
+  element.style.background=
   <button id='test6'> Test</button>
 </p>
-
 <p>
-  testDiv.style.setProperty('background','orange');
+  element.removeAttribute('style');
   <button id='test7'> Test</button>
 </p>
+<p>
+  testDiv.style.setProperty('background','orange');
+  <button id='test8'> Test</button>
+</p>
 
-<h4>Test Output</h4>
 
-<div id='test'></div>
+<p>
+  Load style dynamically by creating &lt;link&gt;
+  <button id='test9'> Test</button>
+</p>
+
+<h2>Basic Tests</h2>
+Blocked<br>
+<a href="inlinestyle.html">inline style</a><br>
+Allowed<br>
+<a href="linkstyle.html">linked style</a><br>
+<a href="importstyle.html">imported style</a><br>
+
+
 
 </body>
 

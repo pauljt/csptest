@@ -9,6 +9,6 @@
   "icons": {
       "128": "/style/icons/Blank.png"
   },
-  "type":"certified",
+  "type":"privileged",
   "csp": "style-src 'self';"
 }
