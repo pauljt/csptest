@@ -10,5 +10,5 @@
       "128": "/style/icons/Blank.png"
   },
   "type":"privileged",
-  "csp": "style-src 'self';"
+  "csp": "image-src 'self'; style-src 'self';"
 }
