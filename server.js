@@ -2,7 +2,7 @@
 var static = require("node-static");
 var file = new static.Server('.', {
   headers: {
-    "Content-Security-Policy": "img-src 'self'; script-src 'self'; style-src 'self'; "
+    "Content-Security-Policy": "default-src *; script-src 'self'; object-src 'none'; style-src 'self';"
   }
 });
 
