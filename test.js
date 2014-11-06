@@ -5,7 +5,14 @@ window.addEventListener('load', function () {
     document.querySelector('#test' + i).addEventListener('click', this['test' + i])
   }
 
+  document.querySelector("#install").addEventListener('click',install);
+
 });
+
+function install(){
+  var manifest=location.protocol+"//"+location.host+"/manifest.webapp";
+  navigator.mozApps.install(manifest);
+}
 
 function test1() {
   testDiv.innerHTML = "<style>div#test {background:blue}</style>Blue"
@@ -44,8 +51,6 @@ function test8(){
   testDiv.style.setProperty('background','orange');
   testDiv.textContent='Orange';
 }
-
-
 
 
 

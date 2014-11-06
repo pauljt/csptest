@@ -5,10 +5,11 @@
   "developer": {
     "name": "pauljt",
     "url": "https://github.com/pauljt"
-    },
-  "icons": {
-      "128": "/style/icons/Blank.png"
   },
-  "type":"privileged",
-  "csp": "image-src 'self'; style-src 'self';"
+  "icons": {
+    "128": "/style/icons/Blank.png"
+  },
+  "type": "web",
+  "csp":"img-src 'self'; script-src 'self'; style-src 'self';"
+
 }
